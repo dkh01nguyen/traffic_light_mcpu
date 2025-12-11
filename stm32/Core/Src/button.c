@@ -9,10 +9,10 @@
 
 // Button GPIO pins (will be defined in main.h after GPIO config)
 // Using these pins (avoiding already-in-use pins):
-// BUTTON_1_MOD1: PB4
-// BUTTON_2_MOD1: PB5
-// BUTTON_1_MOD2: PB6
-// BUTTON_2_MOD2: PB7
+// BUTTON_1_MOD1: PB8
+// BUTTON_2_MOD1: PB9
+// BUTTON_1_MOD2: PB10
+// BUTTON_2_MOD2: PB11
 
 // Button state arrays
 static uint8_t button_current[NUM_BUTTONS] = {BUTTON_RELEASED};
@@ -51,16 +51,16 @@ static uint8_t read_button_gpio(uint8_t index) {
     
     switch(index) {
         case BUTTON_1_MOD1:
-            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4);
+            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_8);
             break;
         case BUTTON_2_MOD1:
-            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5);
+            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_9);
             break;
         case BUTTON_1_MOD2:
-            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6);
+            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_10);
             break;
         case BUTTON_2_MOD2:
-            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_7);
+            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_11);
             break;
         default:
             return BUTTON_RELEASED;

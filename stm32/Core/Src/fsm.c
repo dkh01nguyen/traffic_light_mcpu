@@ -38,8 +38,8 @@ void fsm_lcd_update(void) {
     if (!lcd_update_flag) return;
     lcd_update_flag = 0;
     
-    char line1[17] = {0};
-    char line2[17] = {0};
+    char line1[20] = {0};
+    char line2[20] = {0};
     
     switch(currentState) {
         case STATE_INIT:

@@ -3,6 +3,7 @@ Edit by modify: Ngoc Hang
 **/
 
 #include "i2c-lcd.h"
+#include "main.h"
 extern I2C_HandleTypeDef hi2c1;  // change your handler here accordingly
 
 #define SLAVE_ADDRESS_LCD (0x21 << 1) // change this according to ur setup

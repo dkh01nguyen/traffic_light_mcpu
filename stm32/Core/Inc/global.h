@@ -65,9 +65,6 @@ extern uint8_t initDisplayCounter;
 // Balance check flag
 extern uint8_t isBalanced;
 
-// I2C handle (will be initialized in main)
-extern I2C_HandleTypeDef hi2c1;
-
 // Function prototypes
 void global_init(void);
 void save_durations_to_flash(void);

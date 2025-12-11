@@ -1,0 +1,5 @@
+../Core/Src/button.c:32:6:button_init	2
+../Core/Src/button.c:49:16:read_button_gpio	5
+../Core/Src/button.c:76:6:button_reading	8
+../Core/Src/button.c:126:9:is_button_pressed	3
+../Core/Src/button.c:141:9:is_button_long_pressed	3

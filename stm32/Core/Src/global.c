@@ -29,9 +29,6 @@ uint8_t initDisplayCounter = 0;
 // Balance check flag
 uint8_t isBalanced = 1;
 
-// I2C handle
-I2C_HandleTypeDef hi2c1;
-
 /**
  * @brief Initialize global variables
  */
