@@ -1,25 +1,9 @@
-\contentsline {section}{\numberline {1}Design objectives and Requirements}{4}{section.1}%
-\contentsline {section}{\numberline {2}Summary}{5}{section.2}%
-\contentsline {section}{\numberline {3}THEORETICAL BACKGROUND}{5}{section.3}%
-\contentsline {section}{\numberline {4}The Microcontroller Unit (MCU)}{5}{section.4}%
-\contentsline {section}{\numberline {5}Interfacing with LCD 16x2}{5}{section.5}%
-\contentsline {section}{\numberline {6}Input/Output Peripherals}{6}{section.6}%
-\contentsline {subsection}{\numberline {6.1}LED Indicators}{6}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Pushbuttons and Debouncing}{6}{subsection.6.2}%
-\contentsline {section}{\numberline {7}HARDWARE AND SYSTEM DESIGN}{6}{section.7}%
-\contentsline {section}{\numberline {8}System Block Diagram}{6}{section.8}%
-\contentsline {section}{\numberline {9}Pin Allocation and Interfacing}{6}{section.9}%
-\contentsline {section}{\numberline {10}Circuit Schematic}{7}{section.10}%
-\contentsline {section}{\numberline {11}ALGORITHM AND SOFTWARE IMPLEMENTATION}{7}{section.11}%
-\contentsline {section}{\numberline {12}Finite State Machine (FSM) Logic}{7}{section.12}%
-\contentsline {section}{\numberline {13}Flowchart}{7}{section.13}%
-\contentsline {section}{\numberline {14}Timer Calculation}{8}{section.14}%
-\contentsline {section}{\numberline {15}Software Code Snippet (C Language)}{8}{section.15}%
-\contentsline {section}{\numberline {16}SIMULATION RESULTS AND EVALUATION}{9}{section.16}%
-\contentsline {section}{\numberline {17}Simulation Environment}{9}{section.17}%
-\contentsline {section}{\numberline {18}Achieved Results}{9}{section.18}%
-\contentsline {subsection}{\numberline {18.1}Automatic Mode}{9}{subsection.18.1}%
-\contentsline {subsection}{\numberline {18.2}Editing Mode}{10}{subsection.18.2}%
-\contentsline {subsection}{\numberline {18.3}Warning Mode}{10}{subsection.18.3}%
-\contentsline {section}{\numberline {19}Evaluation}{10}{section.19}%
-\contentsline {chapter}{CONCLUSION AND FUTURE WORK}{10}{section.19}%
+\contentsline {section}{\numberline {1}Design objectives and Requirements}{3}{section.1}%
+\contentsline {section}{\numberline {2}Physical Components}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Microcontroller Unit (MCU)}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Interfacing with LCD 16x2}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}LED module for traffic lights}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Buttons and Debouncing}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Finite State Machine (FSM) Logic}{5}{section.3}%
+\contentsline {section}{\numberline {4}System Block Diagram}{5}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion and Future Improvements}{6}{section.5}%

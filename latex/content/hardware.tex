@@ -1,0 +1,19 @@
+% -----------------------------------------------------------------------------
+% CHAPTER 2: Components detail
+% -----------------------------------------------------------------------------
+\section{Physical Components}
+
+\subsection{The Microcontroller Unit (MCU)}
+
+\subsection{Interfacing with LCD 16x2}
+The LCD 16x2 module based on the HD44780 controller is used for information display. In this assignment, our display
+use an I2C shield in order to communicate with the MCU.
+
+% TODO: Insert picture of the screen here
+
+\subsection{LED module for traffic lights}
+
+\subsection{Buttons and Debouncing}
+The system uses four pull-up configured pushbuttons. Software debouncing 
+(typically 20ms delay) with timer interrupt rather than using \code{HAL\_Delay()} is 
+implemented to ensure reliable signal readings from the mechanical switches.
