@@ -1,3 +1,8 @@
+# Ignore my personal files and folders
+.vscode/
+stm32/Core/PROMPT.md
+stm32/Core/REPORT.md
+
 # Prerequisites
 *.d
 
