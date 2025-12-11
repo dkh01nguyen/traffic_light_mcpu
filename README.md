@@ -11,4 +11,3 @@ This repository contains: TBD
 | Nguyen Hung Thinh | 2313287 | Software developer |
 | Nguyen Thai Hoang | 2311062 | Hardware developer |
 | Duong Khoi Nguyen | 2312333 | Project manager |
-| Claude AI | 2341000 | AI assistant |
