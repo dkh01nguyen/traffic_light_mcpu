@@ -1,9 +1,0 @@
-\contentsline {section}{\numberline {1}Design objectives and Requirements}{3}{section.1}%
-\contentsline {section}{\numberline {2}Physical Components}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}The Microcontroller Unit (MCU)}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Interfacing with LCD 16x2}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}LED module for traffic lights}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Buttons and Debouncing}{4}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Finite State Machine (FSM) Logic}{5}{section.3}%
-\contentsline {section}{\numberline {4}System Block Diagram}{5}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion and Future Improvements}{6}{section.5}%
