@@ -1,2 +1,7 @@
-# traffic_light_mcpu
-MCPU project - HCMUT
+# TRAFFIC LIGHT PROJECT - HCMUT
+
+This repository contains:
+
+---
+idk
+---
