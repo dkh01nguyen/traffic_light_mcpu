@@ -1,7 +1,4 @@
 # TRAFFIC LIGHT PROJECT - HCMUT
 
-This repository contains:
+This repository contains: TBD
 
----
-idk
----
