@@ -1,0 +1,42 @@
+% -----------------------------------------------------------------------------
+% CHAPTER 1: Design objectives and Requirements
+% -----------------------------------------------------------------------------
+\section{Design objectives and Requirements}
+Traffic congestion is a critical issue in many areas. Effective traffic light control is essential for 
+managing vehicle flow, reducing bottlenecks, and enhancing road safety. 
+This project focuses on simulating a flexible four-way traffic light control 
+system that allows for manual intervention and clear status display via an LCD screen.
+
+The main goal is to design and simulate a microcontroller-based traffic light system. 
+The system must meet the following technical requirements:
+\begin{itemize}
+    \vspace{-5pt}
+    \item \textbf{Microcontroller:} Utilize a standard 8 - bit microcontroller.
+    \vspace{-5pt}
+    \item \textbf{Display:} Two sets of traffic lights for two directions. A 16x2 LCD module must display the current mode and the countdown timer.
+    \vspace{-5pt}
+    \item \textbf{Control Interface:} Four buttons are used to control the system with two modes, each has a distinct set of functionalities.
+    \vspace{-5pt}
+    In \texttt{AUTO} mode:
+    \vspace{-10pt}
+    \begin{itemize}
+        \item \texttt{MODE} Button: Cycle through operating modes (Automatic $\leftrightarrow$ Manual).
+        \item \texttt{CONFIG} Button: Entering configuration mode.
+        \item \texttt{UP} Buttons: Increase the Red/Green/Yellow duration.
+        \item \texttt{DOWN} Buttons: Decrease the Red/Green/Yellow duration.
+    \end{itemize}
+    \vspace{-5pt}
+    In \texttt{MANUAL} mode:
+    \vspace{-10pt}
+    \begin{itemize}
+        \item \texttt{MODE} Button: Cycle through operating modes (Automatic $\leftrightarrow$ Manual).
+        \item \texttt{SWITCH} Button: Changing light signals on each direction.
+        \item \texttt{FLASH} Buttons: Flashing Yellow light (Warning signal).
+        \item \texttt{RED} Buttons: Red light on both directions (Emergency stop).
+    \end{itemize}
+    \item \textbf{Safety Logic:} Adherence to traffic regulations must be ensured by satisfying the time constraint:
+    \begin{equation}
+        T_{Red} = T_{Green} + T_{Yellow}
+    \end{equation}
+    The system must automatically calculate the Red light duration based on the user-set Green and Yellow times.
+\end{itemize}
