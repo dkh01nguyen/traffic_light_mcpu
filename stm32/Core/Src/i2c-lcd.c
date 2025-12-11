@@ -74,4 +74,13 @@ void lcd_goto_XY (int row, int col)
 	lcd_send_cmd(pos_Addr);
 }
 
+void lcd_display_2lines(char* line1, char* line2)
+{
+	lcd_clear_display();
+	lcd_goto_XY(1, 0);
+	lcd_send_string(line1);
+	lcd_goto_XY(2, 0);
+	lcd_send_string(line2);
+}
+
 

@@ -1,5 +1,6 @@
 /** 
 Edit by modify: Ngoc Hang 
+Modified for traffic light project
 **/
 
 #include "stm32f1xx_hal.h"
@@ -15,3 +16,5 @@ void lcd_send_string (char *str);  // send string to the lcd
 void lcd_clear_display (void);	//clear display lcd
 
 void lcd_goto_XY (int row, int col); //set proper location on screen
+
+void lcd_display_2lines(char* line1, char* line2); // display 2 lines of text
