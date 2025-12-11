@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  11 DEC 2025 10:15
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  11 DEC 2025 10:09
+>>>>>>> cf747c8bb2b945df103982203bd81087918548d4
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1502,7 +1506,11 @@ Package pdftex.def Info: picture/logobk.png  used on input line 137.
 
 
 ]
+<<<<<<< HEAD
 runsystem(latexminted cleantemp  --timestamp 20251211101505 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+=======
+runsystem(latexminted cleantemp  --timestamp 20251211100925 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+>>>>>>> cf747c8bb2b945df103982203bd81087918548d4
 
  
 enddocument/afterlastpage (AED): lastpage setting LastPage.

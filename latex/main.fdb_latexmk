@@ -1,5 +1,9 @@
 # Fdb version 4
+<<<<<<< HEAD
 ["pdflatex"] 1765422904.56892 "d:/VXL_VDK_Lab/Project/latex/main.tex" "main.pdf" "main" 1765422909.21176 0
+=======
+["pdflatex"] 1765422565.68193 "d:/VXL_VDK_Lab/Project/latex/main.tex" "main.pdf" "main" 1765422567.55816 0
+>>>>>>> cf747c8bb2b945df103982203bd81087918548d4
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm0600.tfm" 993062506 1456 d21918d95ca20f07aa266303b9a0a14c ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm0800.tfm" 993062506 1444 e35ead393df86aae37b5564284d9aa05 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm0900.tfm" 993062508 1444 b1efc6b76338296f8076c1701e4660f3 ""
@@ -256,6 +260,7 @@
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/zref/zref-abspage.sty" 1750428951 2269 2de6c7a5fd634dfef00a960544463a38 ""
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/zref/zref-base.sty" 1750428951 20785 198a9cb2e04238d92c320d0d9edbd76a ""
+<<<<<<< HEAD
   "content/acknow.aux" 1765422908 2018 9b9ceb213338ee1563365acfce17c9d3 "pdflatex"
   "content/acknow.tex" 1765422536 757 f195e513a5ad20bda513d62209be45ae ""
   "content/conclusion.aux" 1765422908 2129 8a8bb28c530c94c993279c34b3d52fca "pdflatex"
@@ -271,6 +276,23 @@
   "main.out" 1765422908 224 79b29babcd813f5ce5ac6cb6de722eba "pdflatex"
   "main.tex" 1765422899 5574 2251cff85954e8dbd621e0fd8a4baa02 ""
   "main.toc" 1765422908 139 8a09315941a0d3635113751621674b33 "pdflatex"
+=======
+  "content/acknow.aux" 1765422567 2018 9b9ceb213338ee1563365acfce17c9d3 "pdflatex"
+  "content/acknow.tex" 1765422536 757 f195e513a5ad20bda513d62209be45ae ""
+  "content/conclusion.aux" 1765422567 2129 8a8bb28c530c94c993279c34b3d52fca "pdflatex"
+  "content/conclusion.tex" 1765376335 1677 f6be92c0bb9ba87ee13be5c39de7b895 ""
+  "content/coverpage.aux" 1765422567 2021 278f7454ef9d16438b0b64c260dc6f68 "pdflatex"
+  "content/coverpage.tex" 1765422064 3031 a4a1abcbea9ba4c50f0d4935d79d6e6f ""
+  "content/implement.aux" 1765422567 2021 f81fc445b022ccbca367c870fc65f419 "pdflatex"
+  "content/implement.tex" 0 -1 0 ""
+  "content/theory.aux" 1765422567 2132 0cb1702f3370c5655f7a4dc5618b49ab "pdflatex"
+  "content/theory.tex" 1765422563 29 0bda71cef3f26d68e73e15bab63cd20d ""
+  "d:/VXL_VDK_Lab/Project/latex/main.tex" 1765422362 5574 2251cff85954e8dbd621e0fd8a4baa02 ""
+  "main.aux" 1765422567 636 d99102a1c91eea6c611d4846eeb4a48d "pdflatex"
+  "main.out" 1765422567 224 79b29babcd813f5ce5ac6cb6de722eba "pdflatex"
+  "main.tex" 1765422362 5574 2251cff85954e8dbd621e0fd8a4baa02 ""
+  "main.toc" 1765422567 139 8a09315941a0d3635113751621674b33 "pdflatex"
+>>>>>>> cf747c8bb2b945df103982203bd81087918548d4
   "picture/logobk.png" 1758694146 56581 5fccf1b2c810badc2465219984b028cd ""
   (generated)
   "content/acknow.aux"
