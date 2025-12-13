@@ -237,6 +237,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   if (htim->Instance == TIM2) {
     // Call timer_run every 10ms
+	  SCH_Update();
     timer_run();
   }
 }

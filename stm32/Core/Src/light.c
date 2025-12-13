@@ -36,9 +36,9 @@ void light_init(void) {
  */
 void light_set_ns(LightColor color) {
     // Set bit 0 (PA6)
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, (color & 0x01) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(Ans_GPIO_Port, Ans_Pin, (color & 0x01) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     // Set bit 1 (PA7)
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, (color & 0x02) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(Bns_GPIO_Port, Bns_Pin, (color & 0x02) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     ns_toggle_state = 1;
 }
 
@@ -48,9 +48,9 @@ void light_set_ns(LightColor color) {
  */
 void light_set_ew(LightColor color) {
     // Set bit 0 (PA8)
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, (color & 0x01) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(Aew_GPIO_Port, Aew_Pin, (color & 0x01) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     // Set bit 1 (PA9)
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, (color & 0x02) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(Bew_GPIO_Port, Bew_Pin, (color & 0x02) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     ew_toggle_state = 1;
 }
 

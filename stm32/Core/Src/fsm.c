@@ -43,43 +43,54 @@ void fsm_lcd_update(void) {
     
     switch(currentState) {
         case STATE_INIT:
-            sprintf(line1, "HCMUT PROJECT  ");
+            sprintf(line1, "  HCMUT PROJECT  ");
             sprintf(line2, "TRAFFIC LIGHT  ");
             break;
             
         case STATE_AUTO_NORM:
             if (isBalanced) {
-                // Display countdown for both directions
-                if (currentPhase == PHASE_NS_GREEN_EW_RED || currentPhase == PHASE_NS_YELLOW_EW_RED) {
-                    sprintf(line1, "R:--  Y:--  G:%02d", nsCountdown);
-                    sprintf(line2, "R:%02d  Y:--  G:--", ewCountdown);
-                } else {
-                    sprintf(line1, "R:%02d  Y:--  G:--", nsCountdown);
-                    sprintf(line2, "R:--  Y:--  G:%02d", ewCountdown);
+                // Display countdown for both directions based on current phase
+                switch(currentPhase) {
+                    case PHASE_NS_GREEN_EW_RED:
+                        sprintf(line1, "  R:--  Y:--  G:%02d", nsCountdown);
+                        sprintf(line2, "R:%02d  Y:--  G:--", ewCountdown);
+                        break;
+                    case PHASE_NS_YELLOW_EW_RED:
+                        sprintf(line1, "  R:--  Y:%02d  G:--", nsCountdown);
+                        sprintf(line2, "R:%02d  Y:--  G:--", ewCountdown);
+                        break;
+                    case PHASE_NS_RED_EW_GREEN:
+                        sprintf(line1, "  R:%02d  Y:--  G:--", nsCountdown);
+                        sprintf(line2, "R:--  Y:--  G:%02d", ewCountdown);
+                        break;
+                    case PHASE_NS_RED_EW_YELLOW:
+                        sprintf(line1, "  R:%02d  Y:--  G:--", nsCountdown);
+                        sprintf(line2, "R:--  Y:%02d  G:--", ewCountdown);
+                        break;
                 }
             } else {
-                sprintf(line1, "ERR: UNBALANCED");
+                sprintf(line1, "  ERR: UNBALANCED");
                 sprintf(line2, "R:%02d  Y:%02d  G:%02d", redDuration, yellowDuration, greenDuration);
             }
             break;
             
         case STATE_AUTO_RED:
-            sprintf(line1, "CONFIG RED     ");
+            sprintf(line1, "  CONFIG RED     ");
             sprintf(line2, "R:%02d  Y:%02d  G:%02d", redDuration, yellowDuration, greenDuration);
             break;
             
         case STATE_AUTO_YEL:
-            sprintf(line1, "CONFIG YELLOW  ");
+            sprintf(line1, "  CONFIG YELLOW  ");
             sprintf(line2, "R:%02d  Y:%02d  G:%02d", redDuration, yellowDuration, greenDuration);
             break;
             
         case STATE_AUTO_GRN:
-            sprintf(line1, "CONFIG GREEN   ");
+            sprintf(line1, "  CONFIG GREEN   ");
             sprintf(line2, "R:%02d  Y:%02d  G:%02d", redDuration, yellowDuration, greenDuration);
             break;
             
         case STATE_MANUAL:
-            sprintf(line1, "OPR: MANUAL    ");
+            sprintf(line1, "  OPR: MANUAL    ");
             if (manualSubState == MANUAL_NS_RED_EW_GREEN) {
                 sprintf(line2, "NS:R  EW:G     ");
             } else {
@@ -88,12 +99,12 @@ void fsm_lcd_update(void) {
             break;
             
         case STATE_MANUAL_FLASH_YEL:
-            sprintf(line1, "OPR: MANUAL    ");
+            sprintf(line1, "  OPR: MANUAL    ");
             sprintf(line2, "FLASH YEL      ");
             break;
             
         case STATE_MANUAL_FLASH_RED:
-            sprintf(line1, "OPR: MANUAL    ");
+            sprintf(line1, "  OPR: MANUAL    ");
             sprintf(line2, "FLASH RED      ");
             break;
     }
@@ -261,7 +272,7 @@ void fsm_countdown_update(void) {
     if (ewCountdown > 0) ewCountdown--;
     
     // Check for phase transitions
-    if (nsCountdown == 0 && ewCountdown == 0) {
+    if (nsCountdown == 0 || ewCountdown == 0) {
         switch(currentPhase) {
             case PHASE_NS_GREEN_EW_RED:
                 // NS: Green -> Yellow

@@ -17,6 +17,7 @@
 // Button state arrays
 static uint8_t button_current[NUM_BUTTONS] = {BUTTON_RELEASED};
 static uint8_t button_last[NUM_BUTTONS] = {BUTTON_RELEASED};
+static uint8_t button_stable[NUM_BUTTONS] = {BUTTON_RELEASED};
 static uint8_t button_debounce_counter[NUM_BUTTONS] = {0};
 
 // Button press flags (set when button is pressed, cleared after read)
@@ -34,6 +35,7 @@ void button_init(void) {
     for (i = 0; i < NUM_BUTTONS; i++) {
         button_current[i] = BUTTON_RELEASED;
         button_last[i] = BUTTON_RELEASED;
+        button_stable[i] = BUTTON_RELEASED;
         button_debounce_counter[i] = 0;
         button_flag[i] = 0;
         button_long_press_counter[i] = 0;
@@ -51,16 +53,16 @@ static uint8_t read_button_gpio(uint8_t index) {
     
     switch(index) {
         case BUTTON_1_MOD1:
-            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_8);
+            state = HAL_GPIO_ReadPin(Button_1_GPIO_Port, Button_1_Pin);
             break;
         case BUTTON_2_MOD1:
-            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_9);
+            state = HAL_GPIO_ReadPin(Button_2_GPIO_Port, Button_2_Pin);
             break;
         case BUTTON_1_MOD2:
-            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_10);
+            state = HAL_GPIO_ReadPin(Button_3_GPIO_Port, Button_3_Pin);
             break;
         case BUTTON_2_MOD2:
-            state = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_11);
+            state = HAL_GPIO_ReadPin(Button_4_GPIO_Port, Button_4_Pin);
             break;
         default:
             return BUTTON_RELEASED;
@@ -88,23 +90,25 @@ void button_reading(void) {
                 // Stable state detected
                 button_debounce_counter[i] = DEBOUNCE_TIME;
                 
-                // Detect button press (transition from released to pressed)
-                if (button_current[i] == BUTTON_PRESSED) {
-                    // Button is being held down
-                    if (button_flag[i] == 0) {
-                        // First detection of press
+                // Check for state change
+                if (button_current[i] != button_stable[i]) {
+                    button_stable[i] = button_current[i];
+                    
+                    // Rising edge (Pressed) detection
+                    if (button_stable[i] == BUTTON_PRESSED) {
                         button_flag[i] = 1;
                         button_long_press_counter[i] = 0;
-                    } else {
-                        // Continue counting for long press
-                        button_long_press_counter[i]++;
-                        if (button_long_press_counter[i] >= 100 && !button_long_press_flag[i]) {
-                            // Long press detected (1 second)
-                            button_long_press_flag[i] = 1;
-                        }
+                    }
+                }
+                
+                // Long press logic
+                if (button_stable[i] == BUTTON_PRESSED) {
+                    button_long_press_counter[i]++;
+                    if (button_long_press_counter[i] >= 100 && !button_long_press_flag[i]) {
+                        // Long press detected (1 second)
+                        button_long_press_flag[i] = 1;
                     }
                 } else {
-                    // Button released
                     button_long_press_counter[i] = 0;
                     button_long_press_flag[i] = 0;
                 }

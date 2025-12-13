@@ -60,18 +60,32 @@ void Error_Handler(void);
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
 #define B1_EXTI_IRQn EXTI15_10_IRQn
+#define Button_1_Pin GPIO_PIN_0
+#define Button_1_GPIO_Port GPIOA
+#define Button_2_Pin GPIO_PIN_1
+#define Button_2_GPIO_Port GPIOA
 #define USART_TX_Pin GPIO_PIN_2
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3
 #define USART_RX_GPIO_Port GPIOA
+#define Button_3_Pin GPIO_PIN_4
+#define Button_3_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define Button_4_Pin GPIO_PIN_0
+#define Button_4_GPIO_Port GPIOB
+#define Bns_Pin GPIO_PIN_10
+#define Bns_GPIO_Port GPIOB
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
-#define SWO_Pin GPIO_PIN_3
-#define SWO_GPIO_Port GPIOB
+#define Aew_Pin GPIO_PIN_3
+#define Aew_GPIO_Port GPIOB
+#define Ans_Pin GPIO_PIN_4
+#define Ans_GPIO_Port GPIOB
+#define Bew_Pin GPIO_PIN_5
+#define Bew_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

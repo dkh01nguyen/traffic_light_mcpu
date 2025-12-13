@@ -21,7 +21,7 @@
 #define BUTTON_PRESSED   1
 
 // Debounce settings
-#define DEBOUNCE_TIME    2  // 2 cycles of 10ms = 20ms
+#define DEBOUNCE_TIME    5  // 50 cycles of 10ms = 500ms
 
 // Button press flags
 extern uint8_t button_flag[NUM_BUTTONS];

@@ -58,7 +58,7 @@ void SysTick_Handler(void);
 void TIM2_IRQHandler(void);
 void EXTI15_10_IRQHandler(void);
 /* USER CODE BEGIN EFP */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 /* USER CODE END EFP */
 
 #ifdef __cplusplus
